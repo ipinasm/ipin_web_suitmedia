@@ -1,0 +1,152 @@
+html,body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: antiquewhite;
+    /* line-height: 2,10; */
+    height: 20px;
+    padding-bottom:500px;
+}
+.container-dua {
+    max-width: 800px;
+    margin: 5px auto;
+    /* justify-content: center;
+    text-align: justify; */
+    background-color: blue;
+}
+.layanan {
+    text-align: center;
+    /* margin: -40px 10px 10px; */
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px; 
+}
+#foto1 {
+    width: 80%;
+    border-radius: 10px;
+}
+.layanan.satu {
+    background-color: rgb(55, 147, 222);
+}
+.layanan.satu:hover {
+    background-color: azure;
+}
+.layanan.dua {
+    background-color: rgb(97, 141, 206);
+}
+.layanan.dua:hover {
+    background-color: azure;
+}
+.layanan.tiga {
+    background-color: rgb(7, 50, 65);
+}
+.layanan.tiga:hover {
+    background-color: azure;
+}
+
+.container-tiga {
+    max-width: 800px;
+    margin:auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: blueviolet;
+}
+.gambar {
+    width: 49%;
+    margin: 1px;
+    
+}
+.gambar img {
+    width: 100%;
+
+}
+/* latihan empat */
+.container-empat{
+  max-width: 800px;
+   margin: 5px auto;
+
+}
+.card {
+    border: 1px solid #888;
+    border-radius: 10px;
+    background-color: azure;
+    overflow: hidden;
+    margin: 10px;
+    flex: 1;
+}
+
+.card .header {
+    height: 150px;
+    background-color: #888;
+}
+.card .content {
+    text-align: center;
+    padding-bottom: 20px;
+}
+.card.besar:hover {
+    transform: scale(1.13);
+    margin: 29px;
+}
+
+.container-lima {
+    width: none;
+    height: 250px;
+    margin: 5px auto;
+    border: 5px solid black;
+    display: flex;
+}
+.kotak {
+    width: 50%;
+    height: 50px;
+    background-color: #888;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    overflow: hidden;
+}
+.kotak span {
+    margin: auto;
+}
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+@media(min-width: 600px) {
+.container-satu {
+    box-sizing: border-box;
+    display: flex;
+}
+.container-dua {
+    display: flex;
+    justify-content: space-between;
+}
+.layanan{
+    width: 30%;
+}
+.gambar {
+    width: 24%;
+}
+.container-empat {
+    display: flex;
+}
+.card.besar {
+    transform: scale(1.13);
+    margin: 20px;
+}
+.container-lima {
+    width: 500px;
+    height: 500px;
+}
+.kotak {
+    width: 100px;
+    height: 100px;
+}
+}

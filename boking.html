@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>box</title>
+    <style> body {
+        margin: 0;
+        background-color: antiquewhite;
+    }
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: orange;
+        border-radius: 10px 10px 0 0;
+    }
+    
+    nav img {
+        /* margin-right: 15%; */
+        width: 20%; 
+        height: 20px;/* Jarak antara gambar dan daftar menu */
+        margin-bottom: 10px;
+    }
+    
+    nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav ul li {
+        margin-left: 20px; /* Jarak antara item menu */
+    }
+    
+    /* nav ul li a {
+        text-decoration: none;s
+        color: #000; Atur warna teks sesuai kebutuhan
+        font-weight: bold;
+    } */
+    nav ul li a {
+        text-decoration: none;
+        color: #000; /* Atur warna teks sesuai kebutuhan */
+        font-weight: bold;
+        position: relative; /* Diperlukan untuk menggunakan pseudo-element ::after */
+    }
+    
+    nav ul li a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 3px; /* Ketebalan garis */
+        background-color: #000; /* Warna garis */
+        left: 0;
+        bottom: -5px; /* Jarak garis dari teks */
+        transition: width 0.3s; /* Animasi transisi */
+    }
+    
+    nav ul li a:hover::after {
+        width: 100%; /* Memperluas garis saat hover */
+    }</style>
+</head>
+<body>
+    <nav>
+        <img src="img/asll-removebg-preview.png" alt="">
+        <ul>
+            <li><a href="abaut_me.html">tentang aku</a></li>
+            <li><a href="index.html">Menu</a></li>
+            <li><a href="boking.html">Boking Sekarang</a></li>
+            <li><a href="keritik&saran.html">Kritik dan Saran</a></li>
+        </ul>
+    </nav>
+    <div class="container-dua">
+        <div class="layanan satu">
+            <h4>layanan satu</h4>
+            <p><img src="css.png" id="foto1" alt=""></p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quasi.</p>
+            <button>
+                konfirmasi
+            </button>
+        </div>
+        <div class="layanan dua">
+            <h4>layanan dua</h4>
+            <p><img src="css.png" id="foto1" alt=""></p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quasi.</p>
+            <button>
+                konfirmasi
+            </button>
+        </div>
+        <div class="layanan tiga">
+            <h4>layanan tiga</h4>
+            <p><img src="css.png" id="foto1" alt=""></p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quasi.</p>
+            <button>
+                konfirmasi
+            </button>
+        </div>
+    </div>
+    
+    <div class="container-tiga">
+        <div class="gambar">
+            <img src="css.png" alt="">
+        </div>
+        <div class="gambar">
+            <img src="css.png" alt="">
+        </div>
+        <div class="gambar">
+            <img src="css.png" alt="">
+        </div>
+        <div class="gambar">
+            <img src="css.png" alt="">
+        </div>
+        <div class="gambar">
+            <img src="css.png" alt="">
+        </div>
+        <div class="gambar">
+            <img src="css.png" alt="">
+        </div>
+    </div>
+    
+    <div class="container-empat">
+        <div class="card">
+                <div class="header"> </div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque vero quidem magni aut, ipsa ab!</p>
+                    <button>kirim</button>
+                </div>
+        </div>
+
+         <div class="card besar">
+            <div class="header"> </div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque vero quidem magni aut, ipsa ab!</p>
+                <button>kirim</button>
+            </div>
+        </div>
+
+    <div class="card">
+        <div class="header"> </div>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque vero quidem magni aut, ipsa ab!</p>
+            <button>kirim</button>
+    </div>
+    </div>
+    </div>
+    
+    <div class="container-lima">
+        <div class="kotak">
+            <span>Hello World ipin ahmad syaruguhais!</span>
+        </div>
+    </div>
+    <footer>ipin ahmad s di buat 09/06/2024</footer>
+</body>
+</html>

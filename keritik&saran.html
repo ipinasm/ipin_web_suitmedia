@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kritik dan Saran</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: antiquewhite;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            background-color: orange;
+            border-radius: 10px 10px 0 0;
+            width: 100%;
+            padding: 10px 20px;
+        }
+
+        nav img {
+            width: 20%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background-color: #000;
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #25d366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #20c15a;
+        }
+        #itu {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Kritik dan Saran</h1>
+        <form id="feedback-form">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" placeholder="Masukkan Nama Anda" required>
+
+            <label for="feedback">Kritik dan Saran:</label>
+            <textarea id="feedback" placeholder="Tulis kritik dan saran Anda di sini..." required></textarea>
+
+            <button type="submit">Kirim ke WhatsApp</button> 
+            <button type="submit"><a href="abaut_me.html" id="itu">Kembali ke HOME</a></button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('feedback-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const feedback = document.getElementById('feedback').value;
+            const phoneNumber = '6289657639277'; // Ganti dengan nomor WhatsApp tujuan
+
+            const message = `Halo, saya ${name}.%0A%0AKritik/Saran: %0A${feedback}`;
+
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+            window.open(whatsappURL, '_blank');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BERITA</title>
+</head>
+<style>
+    body {
+    margin: 0;
+    background-color: antiquewhite;
+}
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: orange;
+    border-radius: 10px 10px 0 0;
+}
+
+nav img {
+    /* margin-right: 15%; */
+    width: 20%; 
+    height: 20px;/* Jarak antara gambar dan daftar menu */
+    margin-bottom: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px; /* Jarak antara item menu */
+}
+
+/* nav ul li a {
+    text-decoration: none;s
+    color: #000; Atur warna teks sesuai kebutuhan
+    font-weight: bold;
+} */
+nav ul li a {
+    text-decoration: none;
+    color: #000; /* Atur warna teks sesuai kebutuhan */
+    font-weight: bold;
+    position: relative; /* Diperlukan untuk menggunakan pseudo-element ::after */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px; /* Ketebalan garis */
+    background-color: #000; /* Warna garis */
+    left: 0;
+    bottom: -5px; /* Jarak garis dari teks */
+    transition: width 0.3s; /* Animasi transisi */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Memperluas garis saat hover */
+}
+#foto {
+    width: 100vh;
+    height: 600px;
+}
+
+
+/* dua */
+main {
+    text-align: center;
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url(img/asll-removebg-preview.png);
+}
+
+#foto {
+    margin: 10px;
+    width: 100px;
+    height: 150px;
+    border-radius: 100px;
+}
+.aku {
+    text-align: justify;
+    margin: 10px;
+}
+.dia{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.kamu {
+    text-align: justify;
+    margin: 0 20px 0 0;
+}
+footer {
+    background-color: #333;
+    color: aliceblue;
+    padding: 6px;
+    text-align: justify;
+}
+@media screen and (max-width: 1280px) {
+    nav img {
+        margin-right: 40%;
+        width: 20%; 
+        height: 20px;/* Jarak antara gambar dan daftar menu */
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 768px) {
+    nav img {
+        margin-right: 15%;
+        width: 15%; 
+        height: 30px;/* Jarak antara gambar dan daftar menu */
+        margin-bottom: 5px;
+    }
+}
+@media screen and (max-width: 480px) {
+    nav img {
+        margin-right: 4%;
+    }
+}
+</style>
+<body>
+    <nav>
+        <img src="img/asll-removebg-preview.png" alt="">
+        <ul>
+            <li><a href="abaut_me.html">tentang aku</a></li>
+            <li><a href="index.html">Menu</a></li>
+            <li><a href="boking.html">Boking Sekarang</a></li>
+            <li><a href="keritik&saran.html">Kritik dan Saran</a></li>
+        </ul>
+    </nav>
+   <div class="dia">
+
+    <div class="aku">
+        <img src="img/WhatsApp_Image_2023-11-30_at_20.51.54_f65d3456-removebg-preview.png" alt="" id="foto">
+
+       <p>
+        NAMA : IPIN AHMAD SYARIFUDIN
+        <br>
+        HOBY : SAYA MAIN GAME DLL
+        <br>
+        ALAMAT : CIMUNCANG BANDUNG JAWA-BARAT
+        <br>
+        EMAIL : ipinahamadsyarifudin@gmail.com
+       </p>
+
+
+    </div>
+    <div class="kamu">
+        <p><b>pelkenal nama saya Ipin Ahmad Syarifudin, mahasiswa jurusan teknik informatika di suatu universitas islam nusantara, saat ini berada di semester 6 dan mau naik semester 7. Saya fokus mendalami bidang  Front End. melalui proyek-proyek pribadi, seperti proyek web undangan. Meski tidak aktif di organisasi kampus, saya memanfaatkan waktu untuk mengasah keterampilan HTML CSS JS dan sekarang mendalamin PHP. Saya tertarik magang di Suitmedia untuk menerapkan ilmu saya dan belajar dari profesional di industri ini."</b></p>
+    </div>
+   </div>
+   <footer>
+    <p>"Gagal bukanlah akhir dari segalanya, melainkan kesempatan untuk memulai lagi dengan lebih bijaksana. Setiap kegagalan memberikan pelajaran yang berharga dan memungkinkan kita untuk memperbaiki diri. Jangan biarkan kegagalan menghalangi semangatmu; anggaplah itu sebagai batu loncatan menuju kesuksesan."
+        <br>
+        "Keberanian sejati terletak pada kemampuan untuk bangkit kembali setelah mengalami kegagalan. Teruslah berusaha dan gunakan setiap pengalaman sebagai pelajaran untuk melangkah lebih jauh. Setiap langkah maju, meski kecil, membawa kamu lebih dekat ke tujuanmu dan memperkuat tekad untuk terus berjuang."</p>
+    <div class="p">@ipinahamadsyarifudin</div>
+    </footer>
+</body>
+</html>

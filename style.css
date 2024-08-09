@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+}
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: orange;
+    border-radius: 10px 10px 0 0;
+}
+
+nav img {
+    /* margin-right: 15%; */
+    width: 20%; 
+    height: 20px;/* Jarak antara gambar dan daftar menu */
+    margin-bottom: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px; /* Jarak antara item menu */
+}
+
+/* nav ul li a {
+    text-decoration: none;s
+    color: #000; Atur warna teks sesuai kebutuhan
+    font-weight: bold;
+} */
+nav ul li a {
+    text-decoration: none;
+    color: #000; /* Atur warna teks sesuai kebutuhan */
+    font-weight: bold;
+    position: relative; /* Diperlukan untuk menggunakan pseudo-element ::after */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px; /* Ketebalan garis */
+    background-color: #000; /* Warna garis */
+    left: 0;
+    bottom: -5px; /* Jarak garis dari teks */
+    transition: width 0.3s; /* Animasi transisi */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Memperluas garis saat hover */
+}
+#foto {
+    width: 100vh;
+    height: 600px;
+}
+
+
+/* dua */
+main {
+    text-align: center;
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    /* background-image: url(img/asll-removebg-preview.png); */
+}
+.aku {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    text-align: center;
+    margin: 15px;
+}
+.layanan {
+    border: solid;
+}
+.res {
+text-align: center;}
+
+footer {
+    background-color:#333;
+    color: #000;
+    text-align: center;
+}
+
+
+
+@media screen and (max-width: 1280px) {
+    nav img {
+        margin-right: 40%;
+        width: 20%; 
+        height: 20px;/* Jarak antara gambar dan daftar menu */
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 768px) {
+    nav img {
+        margin-right: 15%;
+        width: 15%; 
+        height: 30px;/* Jarak antara gambar dan daftar menu */
+        margin-bottom: 5px;
+    }
+}
+@media screen and (max-width: 480px) {
+    nav img {
+        margin-right: 4%;
+    }
+}
